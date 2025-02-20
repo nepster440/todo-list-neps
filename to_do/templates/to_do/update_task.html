@@ -30,6 +30,11 @@
                     <textarea class="form-control" id="description" name="description" rows="3" required>{{ task.description }}</textarea>
                     <div class="invalid-feedback">Please enter a description.</div>
                 </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Created At</label>
+                    <textarea class="form-control" id="created_at" name="description" rows="3" required>{{ task.created_at|date:"d M Y, h:i A" }}</textarea>
+                    <div class="invalid-feedback">Please enter a description.</div>
+                </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">💾 Save Changes</button>
                     <a href="{% url 'task_list' %}" class="btn btn-secondary">🔙 Back</a>
